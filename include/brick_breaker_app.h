@@ -1,0 +1,8 @@
+//
+// Created by Trisha Menon on 4/15/21.
+//
+
+#ifndef FINAL_PROJECT_BRICK_BREAKER_APP_H
+#define FINAL_PROJECT_BRICK_BREAKER_APP_H
+
+#endif //FINAL_PROJECT_BRICK_BREAKER_APP_H

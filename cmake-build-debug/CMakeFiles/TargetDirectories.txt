@@ -1,0 +1,4 @@
+/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker-test.dir
+/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker.dir
