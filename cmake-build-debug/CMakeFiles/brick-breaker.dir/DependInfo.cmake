@@ -5,8 +5,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/apps/cinder_app_main.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker.dir/apps/cinder_app_main.cc.o"
+  "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/ball.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker.dir/src/ball.cc.o"
   "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/brick_breaker_app.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker.dir/src/brick_breaker_app.cc.o"
   "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/game_container.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker.dir/src/game_container.cc.o"
+  "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/paddle.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker.dir/src/paddle.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

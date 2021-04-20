@@ -183,6 +183,36 @@ apps/cinder_app_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/apps/cinder_app_main.cc.s
 .PHONY : apps/cinder_app_main.cc.s
 
+src/ball.o: src/ball.cc.o
+
+.PHONY : src/ball.o
+
+# target to build an object file
+src/ball.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/ball.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/ball.cc.o
+.PHONY : src/ball.cc.o
+
+src/ball.i: src/ball.cc.i
+
+.PHONY : src/ball.i
+
+# target to preprocess a source file
+src/ball.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/ball.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/ball.cc.i
+.PHONY : src/ball.cc.i
+
+src/ball.s: src/ball.cc.s
+
+.PHONY : src/ball.s
+
+# target to generate assembly for a file
+src/ball.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/ball.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/ball.cc.s
+.PHONY : src/ball.cc.s
+
 src/brick_breaker_app.o: src/brick_breaker_app.cc.o
 
 .PHONY : src/brick_breaker_app.o
@@ -242,6 +272,36 @@ src/game_container.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/game_container.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/game_container.cc.s
 .PHONY : src/game_container.cc.s
+
+src/paddle.o: src/paddle.cc.o
+
+.PHONY : src/paddle.o
+
+# target to build an object file
+src/paddle.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/paddle.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/paddle.cc.o
+.PHONY : src/paddle.cc.o
+
+src/paddle.i: src/paddle.cc.i
+
+.PHONY : src/paddle.i
+
+# target to preprocess a source file
+src/paddle.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/paddle.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/paddle.cc.i
+.PHONY : src/paddle.cc.i
+
+src/paddle.s: src/paddle.cc.s
+
+.PHONY : src/paddle.s
+
+# target to generate assembly for a file
+src/paddle.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/paddle.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/paddle.cc.s
+.PHONY : src/paddle.cc.s
 
 tests/test_game_container.o: tests/test_game_container.cc.o
 
@@ -310,12 +370,18 @@ help:
 	@echo "... apps/cinder_app_main.o"
 	@echo "... apps/cinder_app_main.i"
 	@echo "... apps/cinder_app_main.s"
+	@echo "... src/ball.o"
+	@echo "... src/ball.i"
+	@echo "... src/ball.s"
 	@echo "... src/brick_breaker_app.o"
 	@echo "... src/brick_breaker_app.i"
 	@echo "... src/brick_breaker_app.s"
 	@echo "... src/game_container.o"
 	@echo "... src/game_container.i"
 	@echo "... src/game_container.s"
+	@echo "... src/paddle.o"
+	@echo "... src/paddle.i"
+	@echo "... src/paddle.s"
 	@echo "... tests/test_game_container.o"
 	@echo "... tests/test_game_container.i"
 	@echo "... tests/test_game_container.s"
