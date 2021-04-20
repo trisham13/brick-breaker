@@ -303,6 +303,36 @@ src/paddle.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/paddle.cc.s
 .PHONY : src/paddle.cc.s
 
+src/physics_engine.o: src/physics_engine.cc.o
+
+.PHONY : src/physics_engine.o
+
+# target to build an object file
+src/physics_engine.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/physics_engine.cc.o
+.PHONY : src/physics_engine.cc.o
+
+src/physics_engine.i: src/physics_engine.cc.i
+
+.PHONY : src/physics_engine.i
+
+# target to preprocess a source file
+src/physics_engine.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/physics_engine.cc.i
+.PHONY : src/physics_engine.cc.i
+
+src/physics_engine.s: src/physics_engine.cc.s
+
+.PHONY : src/physics_engine.s
+
+# target to generate assembly for a file
+src/physics_engine.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker.dir/build.make CMakeFiles/brick-breaker.dir/src/physics_engine.cc.s
+.PHONY : src/physics_engine.cc.s
+
 tests/test_game_container.o: tests/test_game_container.cc.o
 
 .PHONY : tests/test_game_container.o
@@ -382,6 +412,9 @@ help:
 	@echo "... src/paddle.o"
 	@echo "... src/paddle.i"
 	@echo "... src/paddle.s"
+	@echo "... src/physics_engine.o"
+	@echo "... src/physics_engine.i"
+	@echo "... src/physics_engine.s"
 	@echo "... tests/test_game_container.o"
 	@echo "... tests/test_game_container.i"
 	@echo "... tests/test_game_container.s"

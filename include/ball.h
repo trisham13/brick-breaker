@@ -11,6 +11,7 @@ namespace brickbreaker {
  */
 struct Ball {
  public:
+  Ball();
   /**
    * TODO
    */
@@ -18,7 +19,7 @@ struct Ball {
   /**
    * TODO
    */
-  Ball(float radius, const glm::vec2 &position, const glm::vec2 &velocity);
+  Ball(const glm::vec2 &position, const glm::vec2 &velocity);
 
   glm::vec2 position_;
   glm::vec2 velocity_;
@@ -29,9 +30,9 @@ struct Ball {
   constexpr static const double kInitialVelocityX = 2;
   constexpr static const double kInitialVelocityY = 1.5;
 
-  glm::vec2 GetPosition() const;
-  glm::vec2 GetVelocity() const;
-  size_t GetRadius();
+  const glm::vec2& GetPosition() const;
+  const glm::vec2& GetVelocity() const;
+  size_t GetRadius() const;
   void SetPosition(double x, double y);
   void SetVelocity(const glm::vec2 &velocity);
   void SetVelocity(double x, double y);

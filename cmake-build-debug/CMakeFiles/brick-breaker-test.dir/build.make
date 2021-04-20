@@ -146,9 +146,22 @@ CMakeFiles/brick-breaker-test.dir/src/paddle.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/brick-breaker-test.dir/src/paddle.cc.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/paddle.cc -o CMakeFiles/brick-breaker-test.dir/src/paddle.cc.s
 
+CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o: CMakeFiles/brick-breaker-test.dir/flags.make
+CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o: ../src/physics_engine.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o -c /Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/physics_engine.cc
+
+CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/physics_engine.cc > CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.i
+
+CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/physics_engine.cc -o CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.s
+
 CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o: CMakeFiles/brick-breaker-test.dir/flags.make
 CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o: ../tests/test_game_container.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o -c /Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_game_container.cc
 
 CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.i: cmake_force
@@ -166,6 +179,7 @@ brick__breaker__test_OBJECTS = \
 "CMakeFiles/brick-breaker-test.dir/src/game_container.cc.o" \
 "CMakeFiles/brick-breaker-test.dir/src/ball.cc.o" \
 "CMakeFiles/brick-breaker-test.dir/src/paddle.cc.o" \
+"CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o" \
 "CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o"
 
 # External object files for target brick-breaker-test
@@ -176,13 +190,14 @@ Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-tes
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/src/game_container.cc.o
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/src/ball.cc.o
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/src/paddle.cc.o
+Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/build.make
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: /Users/trishamenon/Desktop/Cinder/lib/macosx/Debug/libcinder.a
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: /Users/trishamenon/Desktop/Cinder/lib/macosx/libboost_system.a
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: /Users/trishamenon/Desktop/Cinder/lib/macosx/libboost_filesystem.a
 Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test: CMakeFiles/brick-breaker-test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Debug/brick-breaker-test/brick-breaker-test.app/Contents/MacOS/brick-breaker-test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/brick-breaker-test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

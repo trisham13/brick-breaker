@@ -9,6 +9,7 @@ This game has a lot of meaning to me because I grew up playing this game and rec
 experience for me. I will use only the tools that we learned in class, so I should have all the resources available to
 me to build it properly.
 
-By the end of Week 1, I want to have a lot of the graphics done. By Week 2, I want to get the backend working to make a
-functional game, and I want to work on final touches on Week 3. If I were to finish early, I would try to add more
-screens or levels for the player to progress through and add powerups for the player to use throughout the game.
+By the end of Week 1, I want to get the backend working and create my physics and object classes. By Week 2, I want to
+have a lot of the graphics done, and I want to work on final touches on Week 3. If I were to finish early, I would try
+to add more screens or levels for the player to progress through and add powerups for the player to use throughout the
+game.

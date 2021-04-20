@@ -159,6 +159,10 @@
 			<Option target="brick-breaker-test"/>
 			<Option target="brick-breaker"/>
 		</Unit>
+		<Unit filename="/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/physics_engine.cc">
+			<Option target="brick-breaker-test"/>
+			<Option target="brick-breaker"/>
+		</Unit>
 		<Unit filename="/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_game_container.cc">
 			<Option target="brick-breaker-test"/>
 		</Unit>

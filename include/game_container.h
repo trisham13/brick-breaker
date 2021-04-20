@@ -1,8 +1,8 @@
 #pragma once
 
 #include "cinder/gl/gl.h"
-#include "ball.h"
 #include "paddle.h"
+#include "physics_engine.h"
 
 namespace brickbreaker {
 
@@ -26,6 +26,8 @@ using glm::vec2;
          */
         void AdvanceOneFrame();
     private:
+      std::vector<brickbreaker::Ball> balls_;
+
       const size_t kDistanceFromOrigin = 25;
       const size_t kSideLength = 700;
     };

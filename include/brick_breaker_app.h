@@ -30,14 +30,23 @@ class BrickBreakerApp : public ci::app::App {
 
   void mouseMove(ci::app::MouseEvent event) override;
 
+  size_t GetScore() const;
+  size_t GetLives() const;
+  const Paddle& GetPaddle() const;
+  const Ball& GetBall() const;
+  bool HasPlayerWon() const;
+
  private:
   const int kWindowSize = 750;
-  //const size_t kInitialLives = 3;
+  const size_t kInitialLives = 3;
 
-//  size_t score_;
-  //size_t lives_;
+  size_t score_;
+  size_t lives_;
+  Paddle paddle_;
+  Ball ball_;
+  GameContainer container_;
 
- // bool has_won_;
+  bool has_won_;
 };
 
 }  // namespace brickbreaker

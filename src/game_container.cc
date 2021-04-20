@@ -2,20 +2,24 @@
 
 namespace brickbreaker {
 
-    GameContainer::GameContainer() {
+GameContainer::GameContainer() {
+}
 
-    }
+void GameContainer::Display() const {
+  ci::gl::color(ci::Color(104, 178, 222));
+  ci::gl::drawStrokedRect(
+      ci::Rectf(vec2(kDistanceFromOrigin, kDistanceFromOrigin),
+                vec2(kSideLength + kDistanceFromOrigin,
+                     kSideLength + kDistanceFromOrigin)));
+}
 
-    void GameContainer::Display() const {
-      ci::gl::color(ci::Color(104, 178, 222));
-      ci::gl::drawStrokedRect(
-          ci::Rectf(vec2(kDistanceFromOrigin, kDistanceFromOrigin),
-                    vec2(kSideLength + kDistanceFromOrigin,
-                         kSideLength + kDistanceFromOrigin)));
-    }
-
-    void GameContainer::AdvanceOneFrame() {
-
-    }
+void GameContainer::AdvanceOneFrame() {
+  for (brickbreaker::Ball& ball : balls_) {
+    brickbreaker::PhysicsEngine::UpdateVelocityAfterVerticalWallCollision(ball);
+    brickbreaker::PhysicsEngine::UpdateVelocityAfterHorizontalWallCollision(ball);
+    brickbreaker::
+    brickbreaker::PhysicsEngine::UpdatePosition(ball);
+  }
+}
 
 }  // namespace brickbreaker
