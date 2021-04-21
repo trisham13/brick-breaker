@@ -23,7 +23,7 @@ void PhysicsEngine::UpdateVelocityAfterVerticalWallCollision(Ball& ball) {
 
 void PhysicsEngine::UpdateVelocityAfterTopHorizontalWallCollision(Ball& ball) {
   double distance_from_top_wall = glm::distance(
-      ball.GetPosition(), glm::vec2(ball.GetPosition().x, kDistanceFromOrigin));
+      ball.GetPosition(), glm::vec2(ball.GetPosition().x, kTopMargin));
   if ((distance_from_top_wall <= ball.GetRadius() &&
        ball.GetVelocity().y < 0)) {
     ball.SetVelocity(ball.GetVelocity().x, -1 * ball.GetVelocity().y);
@@ -32,18 +32,16 @@ void PhysicsEngine::UpdateVelocityAfterTopHorizontalWallCollision(Ball& ball) {
 
 void PhysicsEngine::UpdateVelocityAfterPaddleCollision(Ball& ball,
                                                        Paddle& paddle) {
-  double distance_from_top_of_paddle = glm::distance(
-      ball.GetPosition(),
-      glm::vec2(paddle.GetPosition().x), paddle.GetPosition().y + );
-      if ((ball.GetPosition().x >= paddle.paddle_top_left_corner_.x) &&
-          (ball.GetPosition().x <= paddle.paddle_bottom_right_corner_.x) &&
-          (ball.GetPosition().y + ball.GetRadius() >= paddle.paddle_top_left_corner_.y)) &&
-          ball.GetVelocity().y > 0) {
+  if ((ball.GetPosition().x >= paddle.GetTopLeftCorner().x) &&
+      (ball.GetPosition().x <= paddle.GetBottomRightCorner().x) &&
+      (ball.GetPosition().y + ball.GetRadius() >=
+       paddle.GetTopLeftCorner().y) &&
+      ball.GetVelocity().y > 0) {
     ball.SetVelocity(ball.GetVelocity().x, -1 * ball.GetVelocity().y);
   }
 }
 
-void PhysicsEngine::UpdateVelocityAfterBrickCollision(Ball& ball) {
-}
+//void PhysicsEngine::UpdateVelocityAfterBrickCollision(Ball& ball) {
+//}
 
 }  // namespace brickbreaker

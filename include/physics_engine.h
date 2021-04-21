@@ -30,11 +30,12 @@ class PhysicsEngine {
       brickbreaker::Ball& ball);
   static void UpdateVelocityAfterPaddleCollision(brickbreaker::Ball& ball,
                                                  brickbreaker::Paddle& paddle);
-  static void UpdateVelocityAfterBrickCollision(brickbreaker::Ball& ball);
+//  static void UpdateVelocityAfterBrickCollision(brickbreaker::Ball& ball);
 
  private:
   static const int kSideLength = 500;
   static const int kDistanceFromOrigin = 25;
+  static const int kTopMargin = 150;
 };
 
 }  // namespace brickbreaker

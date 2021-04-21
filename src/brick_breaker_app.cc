@@ -10,11 +10,11 @@ brickbreaker::BrickBreakerApp::BrickBreakerApp()
 }
 
 void BrickBreakerApp::draw() {
-  ci::Color background_color(104, 178, 222);
+  ci::Color background_color("black");
   ci::gl::clear(background_color);
-
   container_.Display();
-
+  container_.GetPaddle().Draw();
+  container_.GetBall().Draw();
 }
 
 void BrickBreakerApp::update() {
@@ -35,14 +35,6 @@ size_t BrickBreakerApp::GetScore() const {
 
 size_t BrickBreakerApp::GetLives() const {
   return lives_;
-}
-
-const Paddle& BrickBreakerApp::GetPaddle() const {
-  return paddle_;
-}
-
-const Ball& BrickBreakerApp::GetBall() const {
-  return ball_;
 }
 
 bool BrickBreakerApp::HasPlayerWon() const {

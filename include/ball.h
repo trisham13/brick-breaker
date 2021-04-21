@@ -21,10 +21,12 @@ struct Ball {
    */
   Ball(const glm::vec2 &position, const glm::vec2 &velocity);
 
+  void Draw() const;
+
   glm::vec2 position_;
   glm::vec2 velocity_;
 
-  const size_t kRadius = 5;
+  const size_t kRadius = 10;
 
   static const size_t kInitialPosition = 65;
   constexpr static const double kInitialVelocityX = 2;
