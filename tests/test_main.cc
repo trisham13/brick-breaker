@@ -1,4 +1,2 @@
-//
-// Created by Trisha Menon on 4/15/21.
-//
-
+#define CATCH_CONFIG_MAIN
+#include <catch2/catch.hpp>

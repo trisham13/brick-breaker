@@ -4,8 +4,7 @@
 
 namespace brickbreaker {
 
-brickbreaker::BrickBreakerApp::BrickBreakerApp()
-    : score_(0), lives_(kInitialLives), has_won_(false) {
+brickbreaker::BrickBreakerApp::BrickBreakerApp() {
   ci::app::setWindowSize(kWindowSize, kWindowSize);
 }
 
@@ -18,27 +17,20 @@ void BrickBreakerApp::draw() {
 }
 
 void BrickBreakerApp::update() {
-  AppBase::update();
+  container_.AdvanceOneFrame();
 }
 
 void BrickBreakerApp::keyDown(cinder::app::KeyEvent event) {
-  AppBase::keyDown(event);
-}
-
-void BrickBreakerApp::mouseMove(ci::app::MouseEvent event) {
-  AppBase::mouseMove(event);
-}
-
-size_t BrickBreakerApp::GetScore() const {
-  return score_;
-}
-
-size_t BrickBreakerApp::GetLives() const {
-  return lives_;
-}
-
-bool BrickBreakerApp::HasPlayerWon() const {
-  return has_won_;
+  if (event.getCode() == event.KEY_LEFT) {
+    if (container_.GetPaddle().GetTopLeftCorner().x >= 25 + 2) {
+      container_.GetPaddle().MoveBy(-5);
+    }
+  }
+  if (event.getCode() == event.KEY_RIGHT) {
+    if (container_.GetPaddle().GetBottomRightCorner().x <= 725 - 2) {
+      container_.GetPaddle().MoveBy(5);
+    }
+  }
 }
 
 }  // namespace brickbreaker

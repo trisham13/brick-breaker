@@ -15,10 +15,12 @@ class Paddle {
   /**
    * TODO
    */
-  Paddle(const glm::vec2& paddle_top_left_corner,
-         const glm::vec2& paddle_bottom_right_corner);
+  Paddle(const glm::vec2& top_left_corner,
+         const glm::vec2& bottom_right_corner);
 
-  void Draw() const;
+  void Draw();
+
+  void MoveBy(int increment);
 
   const glm::vec2& GetTopLeftCorner() const;
   void SetTopLeftCorner(const glm::vec2& topLeftCorner);

@@ -169,6 +169,12 @@
 		<Unit filename="/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_main.cc">
 			<Option target="brick-breaker-test"/>
 		</Unit>
+		<Unit filename="/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_paddle.cc">
+			<Option target="brick-breaker-test"/>
+		</Unit>
+		<Unit filename="/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_physics_engine.cc">
+			<Option target="brick-breaker-test"/>
+		</Unit>
 		<Unit filename="/Users/trishamenon/Desktop/Cinder/samples/data/CinderApp.icns">
 			<Option target="brick-breaker-test"/>
 			<Option target="brick-breaker"/>

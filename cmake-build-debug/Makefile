@@ -387,6 +387,60 @@ tests/test_main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_main.cc.s
 .PHONY : tests/test_main.cc.s
 
+tests/test_paddle.o: tests/test_paddle.cc.o
+
+.PHONY : tests/test_paddle.o
+
+# target to build an object file
+tests/test_paddle.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_paddle.cc.o
+.PHONY : tests/test_paddle.cc.o
+
+tests/test_paddle.i: tests/test_paddle.cc.i
+
+.PHONY : tests/test_paddle.i
+
+# target to preprocess a source file
+tests/test_paddle.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_paddle.cc.i
+.PHONY : tests/test_paddle.cc.i
+
+tests/test_paddle.s: tests/test_paddle.cc.s
+
+.PHONY : tests/test_paddle.s
+
+# target to generate assembly for a file
+tests/test_paddle.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_paddle.cc.s
+.PHONY : tests/test_paddle.cc.s
+
+tests/test_physics_engine.o: tests/test_physics_engine.cc.o
+
+.PHONY : tests/test_physics_engine.o
+
+# target to build an object file
+tests/test_physics_engine.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_physics_engine.cc.o
+.PHONY : tests/test_physics_engine.cc.o
+
+tests/test_physics_engine.i: tests/test_physics_engine.cc.i
+
+.PHONY : tests/test_physics_engine.i
+
+# target to preprocess a source file
+tests/test_physics_engine.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_physics_engine.cc.i
+.PHONY : tests/test_physics_engine.cc.i
+
+tests/test_physics_engine.s: tests/test_physics_engine.cc.s
+
+.PHONY : tests/test_physics_engine.s
+
+# target to generate assembly for a file
+tests/test_physics_engine.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/brick-breaker-test.dir/build.make CMakeFiles/brick-breaker-test.dir/tests/test_physics_engine.cc.s
+.PHONY : tests/test_physics_engine.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -421,6 +475,12 @@ help:
 	@echo "... tests/test_main.o"
 	@echo "... tests/test_main.i"
 	@echo "... tests/test_main.s"
+	@echo "... tests/test_paddle.o"
+	@echo "... tests/test_paddle.i"
+	@echo "... tests/test_paddle.s"
+	@echo "... tests/test_physics_engine.o"
+	@echo "... tests/test_physics_engine.i"
+	@echo "... tests/test_physics_engine.s"
 .PHONY : help
 
 

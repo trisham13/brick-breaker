@@ -15,13 +15,13 @@ struct Ball {
   /**
    * TODO
    */
-  Ball(double velocity_x, double velocity_y);
+  Ball(double position_x, double position_y, double velocity_x, double velocity_y);
   /**
    * TODO
    */
   Ball(const glm::vec2 &position, const glm::vec2 &velocity);
 
-  void Draw() const;
+  void Draw();
 
   glm::vec2 position_;
   glm::vec2 velocity_;

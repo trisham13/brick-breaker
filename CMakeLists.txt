@@ -55,7 +55,9 @@ list(APPEND SOURCE_FILES    src/brick_breaker_app.cc
                             src/paddle.cc
                             src/physics_engine.cc)
 
-list(APPEND TEST_FILES  tests/test_game_container.cc)
+list(APPEND TEST_FILES  tests/test_game_container.cc
+                        tests/test_paddle.cc
+                        tests/test_physics_engine.cc)
 
 ci_make_app(
         APP_NAME brick-breaker

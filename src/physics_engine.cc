@@ -2,9 +2,9 @@
 
 namespace brickbreaker {
 
-void PhysicsEngine::UpdatePosition(Ball ball) {
-  ball.SetPosition(ball.GetPosition().x + ball.GetVelocity().x,
-                   ball.GetPosition().y + ball.GetVelocity().y);
+void PhysicsEngine::UpdatePosition(Ball& ball) {
+  ball.SetPosition(ball.GetPosition().x + ceil(ball.GetVelocity().x),
+                   ball.GetPosition().y + ceil(ball.GetVelocity().y));
 }
 
 void PhysicsEngine::UpdateVelocityAfterVerticalWallCollision(Ball& ball) {
@@ -41,7 +41,14 @@ void PhysicsEngine::UpdateVelocityAfterPaddleCollision(Ball& ball,
   }
 }
 
-//void PhysicsEngine::UpdateVelocityAfterBrickCollision(Ball& ball) {
+void PhysicsEngine::HasBallLeftContainer(Ball& ball) {
+  if (ball.GetPosition().y >= kSideLength + kDistanceFromOrigin) {
+    ball.SetPosition(kInitialBallPositionX, kInitialBallPositionY);
+    ball.SetVelocity(0, 0);
+  }
+}
+
+// void PhysicsEngine::UpdateVelocityAfterBrickCollision(Ball& ball) {
 //}
 
 }  // namespace brickbreaker

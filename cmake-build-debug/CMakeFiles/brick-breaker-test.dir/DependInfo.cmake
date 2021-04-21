@@ -11,6 +11,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/src/physics_engine.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker-test.dir/src/physics_engine.cc.o"
   "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_game_container.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker-test.dir/tests/test_game_container.cc.o"
   "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_main.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker-test.dir/tests/test_main.cc.o"
+  "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_paddle.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker-test.dir/tests/test_paddle.cc.o"
+  "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/tests/test_physics_engine.cc" "/Users/trishamenon/Desktop/Cinder/my-projects/final-project-trisham13/cmake-build-debug/CMakeFiles/brick-breaker-test.dir/tests/test_physics_engine.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

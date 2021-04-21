@@ -26,20 +26,29 @@ class GameContainer {
    */
   void AdvanceOneFrame();
 
-  const Paddle GetPaddle() const;
-  const Ball& GetBall() const;
+  Paddle& GetPaddle();
+  Ball& GetBall();
+  size_t GetScore() const;
+  size_t GetLives() const;
+  bool HasPlayerWon() const;
 
  private:
   const glm::vec2 kInitialPaddlePositionTopLeft = glm::vec2(325, 700);
   const glm::vec2 kInitialPaddlePositionBottomRight = glm::vec2(425, 715);
-  const size_t kInitialBallPositionX = 375;
-  const size_t kInitialBallPositionY = 690;
+  const glm::vec2 kInitialBallPosition = glm::vec2(375, 690);
+
+  const size_t kInitialLives = 3;
+  const size_t kDistanceFromOrigin = 25;
+  const size_t kSideLength = 700;
+  const size_t kTopMargin = 125;
 
   Paddle paddle_;
   Ball ball_;
+  bool has_won_;
+  size_t score_;
+  size_t lives_;
 
-  const size_t kDistanceFromOrigin = 25;
-  const size_t kSideLength = 700;
+  static glm::vec2 GenerateRandomVelocity();
 };
 
 }  // namespace brickbreaker
