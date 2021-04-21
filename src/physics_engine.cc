@@ -48,7 +48,4 @@ void PhysicsEngine::HasBallLeftContainer(Ball& ball) {
   }
 }
 
-// void PhysicsEngine::UpdateVelocityAfterBrickCollision(Ball& ball) {
-//}
-
 }  // namespace brickbreaker

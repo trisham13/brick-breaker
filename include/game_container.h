@@ -9,20 +9,24 @@ namespace brickbreaker {
 using glm::vec2;
 
 /**
- * TODO
+ * The container in which all of the bricks, ball and paddle are contained. This
+ * class stores all of the player's data, like score and number of lives, as
+ * well as updating the ball and paddle positions as the game is played.
  */
 class GameContainer {
  public:
   /**
-   * TODO
+   * Create a new container and initializes the paddle, ball, score, and number
+   * of lives.
    */
   GameContainer();
   /**
-   * TODO
+   * Displays the container walls, title, lives box, and score box.
    */
   void Display() const;
   /**
-   * TODO
+   * Updates the positions and velocities of the ball (based on the rules
+   * described in the assignment documentation).
    */
   void AdvanceOneFrame();
 
@@ -48,6 +52,10 @@ class GameContainer {
   size_t score_;
   size_t lives_;
 
+  /**
+   * Generates random doubles from -5 to 5 for the initial velocity of the ball.
+   * @return a vector for the velocity
+   */
   static glm::vec2 GenerateRandomVelocity();
 };
 

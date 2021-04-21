@@ -28,11 +28,18 @@ class PhysicsEngine {
    */
   static void UpdateVelocityAfterTopHorizontalWallCollision(
       brickbreaker::Ball& ball);
+
+  /**
+   * Updates the velocity if the particle is set to collide with the paddle.
+   */
   static void UpdateVelocityAfterPaddleCollision(brickbreaker::Ball& ball,
                                                  brickbreaker::Paddle& paddle);
-  static void HasBallLeftContainer(brickbreaker::Ball& ball);
 
-//  static void UpdateVelocityAfterBrickCollision(brickbreaker::Ball& ball);
+  /**
+   * Resets the ball position and velocity of the ball leaves the screen through
+   * the bottom.
+   */
+  static void HasBallLeftContainer(brickbreaker::Ball& ball);
 
  private:
   static const int kSideLength = 700;

@@ -8,29 +8,28 @@
 namespace brickbreaker {
 
 /**
- * TODO
+ * An app for visualizing a game of brick breaker.
  */
 class BrickBreakerApp : public ci::app::App {
  public:
   BrickBreakerApp();
 
   /**
-   * TODO
+   * Produces the display when first run.
    */
   void draw() override;
   /**
-   * TODO
+   * Calls AdvanceOneFrame to update the entire application.
    */
   void update() override;
   /**
-   * TODO
+   * Moves the paddle left or right depending on the event key.
    * @param event type that determines the action performed
    */
   void keyDown(cinder::app::KeyEvent event) override;
 
  private:
   const int kWindowSize = 750;
-//  const size_t kPaddleWidth = 15;
 
   GameContainer container_;
 
