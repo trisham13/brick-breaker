@@ -15,7 +15,7 @@ Ball::Ball(double position_x, double position_y, double velocity_x, double veloc
 Ball::Ball(const glm::vec2& position, const glm::vec2& velocity)
     : position_(position), velocity_(velocity) {}
 
-void Ball::Draw() {
+void Ball::Draw() const {
   ci::gl::color(ci::Color("black"));
   ci::gl::drawSolidCircle(position_, kRadius);
 }

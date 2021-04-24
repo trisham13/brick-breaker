@@ -31,7 +31,7 @@ void PhysicsEngine::UpdateVelocityAfterTopHorizontalWallCollision(Ball& ball) {
 }
 
 void PhysicsEngine::UpdateVelocityAfterPaddleCollision(Ball& ball,
-                                                       Paddle& paddle) {
+                                                       Paddle paddle) {
   if ((ball.GetPosition().x >= paddle.GetTopLeftCorner().x) &&
       (ball.GetPosition().x <= paddle.GetBottomRightCorner().x) &&
       (ball.GetPosition().y + ball.GetRadius() >=

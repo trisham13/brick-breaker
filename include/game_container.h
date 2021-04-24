@@ -3,6 +3,7 @@
 #include "cinder/gl/gl.h"
 #include "paddle.h"
 #include "physics_engine.h"
+#include "brick.h"
 
 namespace brickbreaker {
 
@@ -34,6 +35,7 @@ class GameContainer {
   Ball& GetBall();
   size_t GetScore() const;
   size_t GetLives() const;
+  std::vector<Brick> GetBricks() const;
   bool HasPlayerWon() const;
 
  private:
@@ -45,7 +47,10 @@ class GameContainer {
   const size_t kDistanceFromOrigin = 25;
   const size_t kSideLength = 700;
   const size_t kTopMargin = 125;
+  const size_t kSmallBoxesWidth = 100;
+  const size_t kSmallBoxesHeight = 75;
 
+  std::vector<Brick> bricks_;
   Paddle paddle_;
   Ball ball_;
   bool has_won_;

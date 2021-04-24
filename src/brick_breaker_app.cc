@@ -14,6 +14,9 @@ void BrickBreakerApp::draw() {
   container_.Display();
   container_.GetPaddle().Draw();
   container_.GetBall().Draw();
+  for (const Brick& brick : container_.GetBricks()) {
+    brick.Draw();
+  }
 }
 
 void BrickBreakerApp::update() {
@@ -23,12 +26,12 @@ void BrickBreakerApp::update() {
 void BrickBreakerApp::keyDown(cinder::app::KeyEvent event) {
   if (event.getCode() == event.KEY_LEFT) {
     if (container_.GetPaddle().GetTopLeftCorner().x >= 25 + 2) {
-      container_.GetPaddle().MoveBy(-5);
+      container_.GetPaddle().MoveBy(-10);
     }
   }
   if (event.getCode() == event.KEY_RIGHT) {
     if (container_.GetPaddle().GetBottomRightCorner().x <= 725 - 2) {
-      container_.GetPaddle().MoveBy(5);
+      container_.GetPaddle().MoveBy(10);
     }
   }
 }

@@ -27,7 +27,7 @@ struct Ball {
   /**
    * Displays the ball based on the position and radius.
    */
-  void Draw();
+  void Draw() const;
 
   glm::vec2 position_;
   glm::vec2 velocity_;

@@ -33,7 +33,7 @@ class PhysicsEngine {
    * Updates the velocity if the particle is set to collide with the paddle.
    */
   static void UpdateVelocityAfterPaddleCollision(brickbreaker::Ball& ball,
-                                                 brickbreaker::Paddle& paddle);
+                                                 Paddle paddle);
 
   /**
    * Resets the ball position and velocity of the ball leaves the screen through

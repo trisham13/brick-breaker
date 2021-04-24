@@ -53,7 +53,8 @@ list(APPEND SOURCE_FILES    src/brick_breaker_app.cc
                             src/game_container.cc
                             src/ball.cc
                             src/paddle.cc
-                            src/physics_engine.cc)
+                            src/physics_engine.cc
+                            src/brick.cc)
 
 list(APPEND TEST_FILES  tests/test_game_container.cc
                         tests/test_paddle.cc
