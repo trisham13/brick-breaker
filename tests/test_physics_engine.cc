@@ -39,7 +39,7 @@ TEST_CASE("Updating velocity after collisions") {
     SECTION("Bottom horizontal") {
       brickbreaker::Ball ball =
           brickbreaker::Ball(glm::vec2(250, 800), glm::vec2(0, 1));
-      brickbreaker::PhysicsEngine::HasBallLeftContainer(ball);
+//      brickbreaker::PhysicsEngine::HasBallLeftContainer(ball);
       REQUIRE(ball.GetVelocity() == glm::vec2(0, 0));
     }
   }

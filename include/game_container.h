@@ -31,11 +31,18 @@ class GameContainer {
    */
   void AdvanceOneFrame();
 
+  /**
+   * Generates random doubles from -5 to 5 for the initial velocity of the ball.
+   * @return a vector for the velocity
+   */
+  static glm::vec2 GenerateRandomVelocity();
+
   Paddle& GetPaddle();
   Ball& GetBall();
   size_t GetScore() const;
   size_t GetLives() const;
-  std::vector<Brick> GetBricks() const;
+  std::vector<Brick> GetBricks();
+  bool HasGameRestarted() const;
   bool HasPlayerWon() const;
 
  private:
@@ -56,12 +63,7 @@ class GameContainer {
   bool has_won_;
   size_t score_;
   size_t lives_;
-
-  /**
-   * Generates random doubles from -5 to 5 for the initial velocity of the ball.
-   * @return a vector for the velocity
-   */
-  static glm::vec2 GenerateRandomVelocity();
+  bool hasGameRestarted_;
 };
 
 }  // namespace brickbreaker

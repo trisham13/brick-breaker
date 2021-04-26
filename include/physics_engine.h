@@ -3,6 +3,7 @@
 #include <cstddef>
 
 #include "ball.h"
+#include "brick.h"
 #include "cinder/gl/gl.h"
 #include "paddle.h"
 
@@ -33,13 +34,27 @@ class PhysicsEngine {
    * Updates the velocity if the particle is set to collide with the paddle.
    */
   static void UpdateVelocityAfterPaddleCollision(brickbreaker::Ball& ball,
-                                                 Paddle paddle);
+                                                 const Paddle& paddle);
+
+  /**
+   * Updates the velocity if the particle is set to collide with the top or
+   * bottom of a brick.
+   */
+  static size_t UpdateVelocityAndScoreAfterBrickTopOrBottomCollision(
+      brickbreaker::Ball& ball, brickbreaker::Brick& brick);
+
+  /**
+   * Updates the velocity if the particle is set to collide with the sides of a
+   * brick.
+   */
+  static size_t UpdateVelocityAndScoreAfterBrickSideCollision(brickbreaker::Ball& ball,
+                                                    brickbreaker::Brick& brick);
 
   /**
    * Resets the ball position and velocity of the ball leaves the screen through
    * the bottom.
    */
-  static void HasBallLeftContainer(brickbreaker::Ball& ball);
+  static bool HasBallLeftContainer(brickbreaker::Ball& ball, Paddle& paddle);
 
  private:
   static const int kSideLength = 700;
