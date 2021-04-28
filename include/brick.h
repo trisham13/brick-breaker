@@ -14,13 +14,15 @@ enum BrickType {
 };
 
 /**
- * TODO
+ * A brick that is added to the container with a specific position and type.
  */
 class Brick {
  public:
   /**
-   * TODO
-   * @param condition
+   * Creates a Brick object at a position with the given top left and bottom
+   * right corners, and of the given type.
+   *
+   * @param type
    * @param top_left_corner
    * @param bottom_right_corner
    */
@@ -33,16 +35,20 @@ class Brick {
   void Draw();
 
   /**
-   * Creates Image objects based on a data file, reading every so lines, based
-   * on the image size of the model.
+   * Creates a Brick object vector based on a data file, reading every 5 lines
+   * to get the brick type and the x and y coordinates for the corners.
    *
    * @param is stream to be extracting lines from
-   * @param image to create and add to vector of images
+   * @param brick vector to add brick objects to
    * @return stream
    */
   friend std::istream &operator>>(std::istream &is,
                                   std::vector<brickbreaker::Brick> &bricks);
 
+  /**
+   * Changes the top left and bottom right corners of the brick to 0,0 and
+   * changes the type to broken.
+   */
   void Erase();
 
   const glm::vec2 &GetTopLeftCorner() const;
@@ -55,10 +61,16 @@ class Brick {
   glm::vec2 top_left_corner_;
   glm::vec2 bottom_right_corner_;
 
-//  size_t kBrickWidth = 100;
-//  size_t kBrickHeight = 40;
+  //  size_t kBrickWidth = 100;
+  //  size_t kBrickHeight = 40;
 };
 
+/**
+ * Creates a vector of brick objects from the file of a given path.
+ *
+ * @param file_path string for the file path to be read
+ * @return
+ */
 std::vector<brickbreaker::Brick> GenerateBricks(const std::string &file_path);
 
 }  // namespace brickbreaker
