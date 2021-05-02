@@ -22,7 +22,7 @@ class Paddle {
   /**
    * Produces the display for the paddle
    */
-  void Draw();
+  void Draw() const;
 
   /**
    * Moves the paddle by a given increment.
