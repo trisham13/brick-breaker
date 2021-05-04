@@ -6,10 +6,11 @@
 #include "brick.h"
 #include "cinder/gl/gl.h"
 #include "paddle.h"
+#include "level.h"
 
 namespace brickbreaker {
 
-class PhysicsEngine {
+struct PhysicsEngine {
  public:
   /**
    * Adds the velocity to the particle's position.
@@ -56,7 +57,6 @@ class PhysicsEngine {
    */
   static bool HasBallLeftContainer(brickbreaker::Ball& ball, Paddle& paddle);
 
- private:
   static const int kSideLength = 700;
   static const int kDistanceFromOrigin = 25;
   static const int kTopMargin = 25 * 5;

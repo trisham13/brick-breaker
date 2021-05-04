@@ -32,9 +32,9 @@ struct Ball {
   glm::vec2 position_;
   glm::vec2 velocity_;
 
-  const size_t kRadius = 10;
+  const size_t kRadius = 7;
 
-  static const size_t kInitialPosition = 65;
+  static const size_t kInitialPosition = 62;
   constexpr static const double kInitialVelocityX = 2;
   constexpr static const double kInitialVelocityY = 1.5;
 
@@ -42,7 +42,7 @@ struct Ball {
   const glm::vec2 &GetVelocity() const;
   size_t GetRadius() const;
   void SetPosition(double x, double y);
-  void SetVelocity(const glm::vec2 &velocity);
+  void SetVelocity(const glm::vec2& velocity);
   void SetVelocity(double x, double y);
 };
 

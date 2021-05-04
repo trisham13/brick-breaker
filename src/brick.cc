@@ -14,17 +14,20 @@ void Brick::Draw() {
     ci::gl::color(ci::Color("darksalmon"));
   } else if (type_ == BrickType::kCracked) {
     ci::gl::color(ci::Color("peachpuff"));
-  } else if (type_ == BrickType::kBroken){
+  } else if (type_ == BrickType::kBroken) {
     Erase();
     return;
   } else {
     ci::gl::color(ci::Color("lightgrey"));
   }
-  ci::gl::drawSolidRect(
-      ci::Rectf(top_left_corner_, bottom_right_corner_));
+  ci::gl::drawSolidRect(ci::Rectf(top_left_corner_, bottom_right_corner_));
   ci::gl::color(ci::Color("black"));
-  ci::gl::drawStrokedRect(
-      ci::Rectf(top_left_corner_, bottom_right_corner_), 2);
+  ci::gl::drawStrokedRect(ci::Rectf(top_left_corner_, bottom_right_corner_), 2);
+//  if (type_ == BrickType::kCracked) {
+//    ci::gl::Texture2dRef image = ci::gl::Texture::create(
+//        ci::loadImage(ci::app::loadAsset("cracked.png")));
+//    ci::gl::draw(image, ci::Rectf(top_left_corner_, bottom_right_corner_));
+//  }
 }
 
 void Brick::SetBrickType(BrickType type) {
@@ -38,7 +41,6 @@ std::istream &operator>>(std::istream &is,
   BrickType type;
   std::vector<size_t> coordinates;
   std::vector<brickbreaker::Brick> new_bricks;
-
 
   while (getline(is, line)) {
     if (count == 1) {
@@ -54,8 +56,9 @@ std::istream &operator>>(std::istream &is,
       coordinates.emplace_back(stoi(line));
     } else {
       coordinates.emplace_back(stoi(line));
-      new_bricks.emplace_back(Brick(type, glm::vec2(coordinates[0], coordinates[1]),
-                                glm::vec2(coordinates[2], coordinates[3])));
+      new_bricks.emplace_back(Brick(type,
+                                    glm::vec2(coordinates[0], coordinates[1]),
+                                    glm::vec2(coordinates[2], coordinates[3])));
       count = 0;
       coordinates.clear();
     }
@@ -67,8 +70,8 @@ std::istream &operator>>(std::istream &is,
 }
 
 void Brick::Erase() {
-  top_left_corner_ = glm::vec2(0,0);
-  bottom_right_corner_ = glm::vec2(0,0);
+  top_left_corner_ = glm::vec2(0, 0);
+  bottom_right_corner_ = glm::vec2(0, 0);
 }
 
 const glm::vec2 &Brick::GetTopLeftCorner() const {

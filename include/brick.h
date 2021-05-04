@@ -2,6 +2,7 @@
 
 #include <cstddef>
 
+#include "cinder/app/app.h"
 #include "cinder/gl/gl.h"
 
 namespace brickbreaker {
@@ -60,9 +61,6 @@ class Brick {
   BrickType type_;
   glm::vec2 top_left_corner_;
   glm::vec2 bottom_right_corner_;
-
-  //  size_t kBrickWidth = 100;
-  //  size_t kBrickHeight = 40;
 };
 
 /**

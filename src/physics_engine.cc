@@ -39,7 +39,7 @@ void PhysicsEngine::UpdateVelocityAfterPaddleCollision(Ball& ball,
       (ball.GetPosition().y + ball.GetRadius() <=
        paddle.GetBottomRightCorner().y) &&
       ball.GetVelocity().y > 0) {
-    ball.SetVelocity(ball.GetVelocity().x, -1 * ball.GetVelocity().y);
+    ball.SetVelocity(ball.GetVelocity().x, ball.GetVelocity().y * -1);
   }
 }
 
@@ -47,7 +47,7 @@ size_t PhysicsEngine::UpdateVelocityAndScoreAfterBrickTopOrBottomCollision(
     Ball& ball, Brick& brick) {
   size_t score = 0;
   if (ball.GetPosition().x + ball.GetRadius() >= brick.GetTopLeftCorner().x &&
-      ball.GetPosition().x + ball.GetRadius() <=
+      ball.GetPosition().x - ball.GetRadius() <=
           brick.GetBottomRightCorner().x &&
       ((glm::distance(
             ball.GetPosition(),
@@ -75,16 +75,16 @@ size_t PhysicsEngine::UpdateVelocityAndScoreAfterBrickTopOrBottomCollision(
 size_t PhysicsEngine::UpdateVelocityAndScoreAfterBrickSideCollision(
     Ball& ball, Brick& brick) {
   size_t score = 0;
-  if (ball.GetPosition().y + ball.GetRadius() >= brick.GetTopLeftCorner().y &&
+  if (ball.GetPosition().y - ball.GetRadius() >= brick.GetTopLeftCorner().y &&
       ball.GetPosition().y + ball.GetRadius() <=
           brick.GetBottomRightCorner().y &&
       ((glm::distance(ball.GetPosition(), glm::vec2(brick.GetTopLeftCorner().x,
-                                                    ball.GetPosition().y)) <
+                                                    ball.GetPosition().y)) <=
             ball.GetRadius() &&
         ball.GetVelocity().x > 0) ||
        (glm::distance(ball.GetPosition(),
                       glm::vec2(brick.GetBottomRightCorner().x,
-                                ball.GetPosition().y)) < ball.GetRadius() &&
+                                ball.GetPosition().y)) <= ball.GetRadius() &&
         ball.GetVelocity().x < 0))) {
     ball.SetVelocity(-1 * ball.GetVelocity().x, ball.GetVelocity().y);
     if (brick.GetBrickType() == BrickType::kStrong) {
@@ -103,8 +103,8 @@ bool PhysicsEngine::HasBallLeftContainer(Ball& ball, Paddle& paddle) {
   if (ball.GetPosition().y >= kSideLength + kDistanceFromOrigin) {
     ball.SetPosition(kInitialBallPositionX, kInitialBallPositionY);
     ball.SetVelocity(0, 0);
-    paddle.SetTopLeftCorner(glm::vec2(325, 700));
-    paddle.SetBottomRightCorner(glm::vec2(425, 715));
+    paddle.SetTopLeftCorner(glm::vec2(275, 700));
+    paddle.SetBottomRightCorner(glm::vec2(475, 715));
     return true;
   }
   return false;
