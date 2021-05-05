@@ -3,9 +3,9 @@
 #include "brick.h"
 #include "cinder/app/app.h"
 #include "cinder/gl/gl.h"
+#include "level.h"
 #include "paddle.h"
 #include "physics_engine.h"
-#include "level.h"
 
 namespace brickbreaker {
 
@@ -23,13 +23,23 @@ class GameContainer {
    * of lives.
    */
   GameContainer(const std::vector<Level>& levels);
+
   /**
    * Displays the container walls, title, lives box, and score box.
    */
   void Display() const;
 
+  /**
+   * Displays the container with the winning screen after the player wins.
+   */
   void DisplayWinningScreen() const;
+
+  /**
+   * Displays the container with the game over message after the player loses
+   * all their lives.
+   */
   void DisplayGameOver() const;
+
   /**
    * Updates the positions and velocities of the ball (based on the rules
    * described in the assignment documentation).
@@ -76,6 +86,14 @@ class GameContainer {
   size_t current_winning_score_;
   size_t max_score_{};
 
+  /**
+   * Displays the templates for the two counters for lives and scores based on
+   * the given title, count, and top left coordinate.
+   *
+   * @param title lives or score
+   * @param count field variable for the count
+   * @param top_left coordinate for drawing the box
+   */
   void DisplayCounters(const std::string& title, size_t count,
                        const glm::vec2& top_left) const;
 };

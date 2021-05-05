@@ -23,9 +23,9 @@ class Brick {
    * Creates a Brick object at a position with the given top left and bottom
    * right corners, and of the given type.
    *
-   * @param type
-   * @param top_left_corner
-   * @param bottom_right_corner
+   * @param type kCracked, kStrong, kUnbreakable, kBroken
+   * @param top_left_corner vector for the top left coordinate
+   * @param bottom_right_corner vector for the bottom right coordinate
    */
   Brick(BrickType type, const glm::vec2 &top_left_corner,
         const glm::vec2 &bottom_right_corner);
@@ -47,7 +47,7 @@ class Brick {
                                   std::vector<brickbreaker::Brick> &bricks);
 
   /**
-   * Changes the top left and bottom right corners of the brick to 0,0 and
+   * Changes the top left and bottom right corners of the brick to (0,0) and
    * changes the type to broken.
    */
   void Erase();
