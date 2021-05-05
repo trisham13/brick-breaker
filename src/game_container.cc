@@ -1,16 +1,14 @@
 #include "game_container.h"
 
 #include <random>
+#include <utility>
 
 namespace brickbreaker {
 
-GameContainer::GameContainer()
+GameContainer::GameContainer(const std::vector<Level>& levels)
     : paddle_(kInitialPaddlePositionTopLeft, kInitialPaddlePositionBottomRight),
-      ball_(kInitialBallPosition, glm::vec2(0, 0)),
-      //      ball_(kInitialBallPosition, GenerateRandomVelocity()),
-      levels_(std::vector<Level>{Level("assets/level_1.txt"),
-                                 Level("assets/level_2.txt"),
-                                 Level("assets/level_3.txt")}),
+      ball_(kInitialBallPosition, GenerateRandomVelocity()),
+      levels_(levels),
       has_won_(false),
       is_game_over(false),
       score_(0),
@@ -158,7 +156,7 @@ void GameContainer::AdvanceOneFrame() {
     }
   }
   if (ball_.GetVelocity().x == 0 && abs(ball_.GetVelocity().y) > 0) {
-    ball_.SetVelocity(ball_.GetVelocity().x + 1, ball_.GetVelocity().y);
+    ball_.SetVelocity(ball_.GetVelocity().x - 1, ball_.GetVelocity().y);
   }
   brickbreaker::PhysicsEngine::UpdatePosition(ball_);
   if (ball_.GetPosition() != kInitialBallPosition) {

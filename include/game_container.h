@@ -22,7 +22,7 @@ class GameContainer {
    * Create a new container and initializes the paddle, ball, score, and number
    * of lives.
    */
-  GameContainer();
+  GameContainer(const std::vector<Level>& levels);
   /**
    * Displays the container walls, title, lives box, and score box.
    */
@@ -46,7 +46,6 @@ class GameContainer {
   Ball& GetBall();
   size_t GetScore() const;
   size_t GetLives() const;
-  std::vector<std::vector<Brick>> GetBricks();
   bool HasGameRestarted() const;
   bool HasPlayerWon() const;
   bool IsGameOver() const;
@@ -75,7 +74,7 @@ class GameContainer {
   bool has_game_restarted_;
   size_t current_level_;
   size_t current_winning_score_;
-  size_t max_score_;
+  size_t max_score_{};
 
   void DisplayCounters(const std::string& title, size_t count,
                        const glm::vec2& top_left) const;
