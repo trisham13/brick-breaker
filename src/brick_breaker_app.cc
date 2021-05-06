@@ -5,8 +5,8 @@
 namespace brickbreaker {
 
 brickbreaker::BrickBreakerApp::BrickBreakerApp()
-    : container_(kTestLevels) {
-//    : container_(kLevels) {
+    //    : container_(kTestLevels) {
+    : container_(kLevels) {
   ci::app::setWindowSize(kWindowSize, kWindowSize + 40);
 }
 
