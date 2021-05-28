@@ -7,20 +7,18 @@
 namespace brickbreaker {
 
 /**
- * TODO
+ * A ball  that is added to the container with a specific location and velocity.
  */
 struct Ball {
  public:
   Ball();
   /**
-   * A ball that is added to the container with a specific location and
-   * velocity.
+   * Creates a ball with a specific location and velocity.
    */
   Ball(double position_x, double position_y, double velocity_x,
        double velocity_y);
   /**
-   * A ball that is added to the container with a specific location and
-   * velocity.
+   * Creates a ball with a specific location and velocity.
    */
   Ball(const glm::vec2 &position, const glm::vec2 &velocity);
 
@@ -32,9 +30,9 @@ struct Ball {
   glm::vec2 position_;
   glm::vec2 velocity_;
 
-  const size_t kRadius = 10;
+  const size_t kRadius = 7;
 
-  static const size_t kInitialPosition = 65;
+  static const size_t kInitialPosition = 62;
   constexpr static const double kInitialVelocityX = 2;
   constexpr static const double kInitialVelocityY = 1.5;
 

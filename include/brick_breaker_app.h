@@ -1,6 +1,6 @@
 #pragma once
 
-#include "cinder/app/App.h"
+#include "cinder/app/app.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/gl/gl.h"
 #include "game_container.h"
@@ -30,6 +30,10 @@ class BrickBreakerApp : public ci::app::App {
 
  private:
   const int kWindowSize = 750;
+  const std::vector<Level> kLevels {Level("assets/level_1.txt"),
+                                         Level("assets/level_2.txt"),
+                                         Level("assets/level_3.txt")};
+  const std::vector<Level> kTestLevels {Level("assets/test_level.txt")};
 
   GameContainer container_;
 

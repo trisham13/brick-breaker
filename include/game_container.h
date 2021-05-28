@@ -1,9 +1,11 @@
 #pragma once
 
+#include "brick.h"
+#include "cinder/app/app.h"
 #include "cinder/gl/gl.h"
+#include "level.h"
 #include "paddle.h"
 #include "physics_engine.h"
-#include "brick.h"
 
 namespace brickbreaker {
 
@@ -20,11 +22,24 @@ class GameContainer {
    * Create a new container and initializes the paddle, ball, score, and number
    * of lives.
    */
-  GameContainer();
+  GameContainer(const std::vector<Level>& levels);
+
   /**
    * Displays the container walls, title, lives box, and score box.
    */
   void Display() const;
+
+  /**
+   * Displays the container with the winning screen after the player wins.
+   */
+  void DisplayWinningScreen() const;
+
+  /**
+   * Displays the container with the game over message after the player loses
+   * all their lives.
+   */
+  void DisplayGameOver() const;
+
   /**
    * Updates the positions and velocities of the ball (based on the rules
    * described in the assignment documentation).
@@ -41,29 +56,46 @@ class GameContainer {
   Ball& GetBall();
   size_t GetScore() const;
   size_t GetLives() const;
-  std::vector<Brick> GetBricks();
   bool HasGameRestarted() const;
   bool HasPlayerWon() const;
+  bool IsGameOver() const;
 
  private:
-  const glm::vec2 kInitialPaddlePositionTopLeft = glm::vec2(325, 700);
-  const glm::vec2 kInitialPaddlePositionBottomRight = glm::vec2(425, 715);
+  const glm::vec2 kInitialPaddlePositionTopLeft = glm::vec2(275, 700);
+  const glm::vec2 kInitialPaddlePositionBottomRight = glm::vec2(475, 715);
   const glm::vec2 kInitialBallPosition = glm::vec2(375, 690);
 
-  const size_t kInitialLives = 3;
+  const size_t kInitialLives = 5;
   const size_t kDistanceFromOrigin = 25;
   const size_t kSideLength = 700;
   const size_t kTopMargin = 125;
-  const size_t kSmallBoxesWidth = 100;
-  const size_t kSmallBoxesHeight = 75;
+  const int kSmallBoxesWidth = 100;
+  const int kSmallBoxesHeight = 75;
+  const std::vector<std::string> kLevelFiles{"assets/level_1.txt",
+                                             "assets/level_2.txt"};
 
-  std::vector<Brick> bricks_;
   Paddle paddle_;
   Ball ball_;
+  std::vector<Level> levels_;
   bool has_won_;
+  bool is_game_over;
   size_t score_;
   size_t lives_;
-  bool hasGameRestarted_;
+  bool has_game_restarted_;
+  size_t current_level_;
+  size_t current_winning_score_;
+  size_t max_score_{};
+
+  /**
+   * Displays the templates for the two counters for lives and scores based on
+   * the given title, count, and top left coordinate.
+   *
+   * @param title lives or score
+   * @param count field variable for the count
+   * @param top_left coordinate for drawing the box
+   */
+  void DisplayCounters(const std::string& title, size_t count,
+                       const glm::vec2& top_left) const;
 };
 
 }  // namespace brickbreaker
